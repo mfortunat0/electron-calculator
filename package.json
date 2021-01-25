@@ -1,0 +1,23 @@
+{
+  "name": "electron-calculator",
+  "version": "1.0.0",
+  "author": "matheus fortunato",
+  "description": "electron-calculator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfortunat0/electron-calculator.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfortunat0/electron-calculator/issues"
+  },
+  "homepage": "https://github.com/mfortunat0/electron-calculator#readme",
+  "devDependencies": {
+    "electron": "^11.2.1"
+  }
+}
