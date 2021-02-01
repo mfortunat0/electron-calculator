@@ -10,6 +10,6 @@ function createWindow() {
     })
     win.setResizable(false)
     win.removeMenu()
-    win.loadFile('index.html')
+    win.loadFile('src/index.html')
 }
 app.whenReady().then(createWindow)

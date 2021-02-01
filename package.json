@@ -1,23 +1,58 @@
 {
-  "name": "electron-calculator",
+  "name": "nada",
+  "productName": "nada",
   "version": "1.0.0",
-  "author": "matheus fortunato",
-  "description": "electron-calculator",
-  "main": "main.js",
+  "description": "My Electron application description",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mfortunat0/electron-calculator.git"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mfortunat0/electron-calculator/issues"
+  "author": {
+    "name": "matheus",
+    "email": "matheus.xmaz10@gmail.com"
   },
-  "homepage": "https://github.com/mfortunat0/electron-calculator#readme",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "nada"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
   "devDependencies": {
-    "electron": "^11.2.1"
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "11.2.1"
   }
 }

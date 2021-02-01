@@ -15,12 +15,14 @@ buttons.forEach(value => {
         else if (value.innerHTML === "=")
             operatorHandle()
         else {
+            if (input.value.length > 5) {
+                input.style.fontSize = input.value.length > 10 ? "6vh" : "8vh"
+            }
             if (value.innerHTML === '.' && dotUsed === false) {
                 input.value = `${input.value}${value.innerHTML}`
                 dotUsed = true
             }
             else {
-                console.log()
                 if (value.innerHTML !== ".") {
                     input.value = `${input.value}${value.innerHTML}`
                     if (isNaN(value.innerHTML)) {
@@ -34,6 +36,9 @@ buttons.forEach(value => {
 
 
 input.addEventListener('keypress', (event) => {
+    if (input.value.length > 5) {
+        input.style.fontSize = input.value.length > 10 ? "6vh" : "8vh"
+    }
     const key = event.key
     if (key === '+' || key === '.' || key === '-' || key === '/' || key === '*' || !isNaN(key)) {
         if (input.value.length > 0) {
